@@ -16,4 +16,6 @@ docker-compose up
 
 Obviously `docker` (and also `docker-compose`) must be installed on the machine where the container is to be run.
 
+----
+
 **v 0.1.0**: Base image drawn from `cschranz/gpu-jupyter` on DockerHub.
