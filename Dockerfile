@@ -1,44 +1,18 @@
-# VERSION: 0.1.0
-# DESCRIPTION: DIGSUM Datascience Docker Containger
+# VERSION: 0.1.2
+# DESCRIPTION: DIGSUM Datascience Docker Container
 # BUILD: sudo docker build --rm -t digsum-docker .
 
-# Use this image from dockerhub as our base image
-FROM cschranz/gpu-jupyter
+# Use this container from dockerhub as base image
+FROM jupyter/datascience-notebook
 
-# Never prompt the user for choices on installation/configuration of packages
-ENV DEBIAN_FRONTEND noninteractive
-ENV TERM linux
+# Install python packages 
+RUN pip install nltk networkx spacy
 
-# Define locales.
-ENV LANGUAGE en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-ENV LC_CTYPE en_US.UTF-8
-ENV LC_MESSAGES en_US.UTF-8
+# Install NLTK content
+RUN python -m nltk.downloader all
 
-USER root
+# Install spacy content
+RUN python -m spacy download en_core_web_sm
 
-# install the locales you want to use
-RUN set -ex \
-    && sed -i 's/^# en_US.UTF-8 UTF-8$/en_US.UTF-8 UTF-8/g' /etc/locale.gen \
-    && sed -i 's/^# pt_BR.UTF-8 UTF-8$/pt_BR.UTF-8 UTF-8/g' /etc/locale.gen \
-    && locale-gen en_US.UTF-8 pt_BR.UTF-8 \
-    && update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
-
-USER $NB_UID
-
-# install Python packages you often use
-RUN set -ex \
-    && conda install --quiet --yes --channel conda-forge \
-    # choose the python packages you need
-    'nltk' \
-    'spacy' \
-    #&& conda clean --all -f -y \
-
-    # install jupyter lab extensions you need
-    && jupyter lab build -y \
-    && jupyter lab clean -y \
-    && rm -rf "/home/${NB_USER}/.cache/yarn" \
-    && rm -rf "/home/${NB_USER}/.node-gyp" \
-    && fix-permissions "${CONDA_DIR}" \
-    && fix-permissions "/home/${NB_USER}"
+# Install Jupyter theme
+RUN pip install jupyterlab_darkside_ui
