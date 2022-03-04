@@ -19,5 +19,6 @@ Obviously `docker` (and also `docker-compose`) must be installed on the machine 
 ----
 
 **v 0.1.0**: Base image drawn from `jupyter/datascience-notebook` on DockerHub. Includes `python`, `r` and `julia`.
+
 **v 0.1.1**: Install `nltk` (plus content), `spacy` (plus content), and `networkx`.
 
