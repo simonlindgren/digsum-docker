@@ -26,7 +26,7 @@ Created by Simon Lindgren.
 
 ----
 
-**v 0.1.0**: Base image drawn from `jupyter/datascience-notebook` on DockerHub. Includes `jupyterlab`, `python`, `r` and `julia`.
+**v 0.1.0**: Base image drawn from `jupyter/datascience-notebook` on DockerHub. Includes, e.g., `jupyterlab`, `python`, `r` and `julia`.
 
 **v 0.1.1**: Install `nltk` (plus content), `spacy` (plus content), and `networkx`.
 
