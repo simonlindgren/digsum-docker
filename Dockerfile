@@ -1,12 +1,7 @@
 # VERSION: 0.1.2
 # DESCRIPTION: DIGSUM Datascience Docker Container
-# SOURCE: https://github.com/simonlindgren/digsum-docker
+# FULL DESCRIPTION: https://github.com/simonlindgren/digsum-docker
 # BUILD: sudo docker build --rm -t digsum-docker .
-
-# LAUNCH [setting jupyterlab port, mounting a local dir]: 
-#
-# docker run -p 8888:8888 --mount type=bind, source=/path/to/working/dir, target=/home/jovyan/work/working_dir digsum-docker
-#
 
 # Use this container from dockerhub as our base image
 FROM jupyter/datascience-notebook
