@@ -13,7 +13,7 @@ Created by Simon Lindgren.
 
 5. Run the container, and mount a working directory: `docker run -p 8888:8888 --mount type=bind,source=/path/to/local/working_dir,target=/home/jovyan/working_dir digsum-docker`
 
-6. Access JupyterLab (with Python, R, Julia, and relevant packages) in a browser at `http://127.0.0.1:8888/lab?token=<token>``
+6. Access JupyterLab (with Python, R, Julia, and relevant packages) in a browser at `http://127.0.0.1:8888/lab?token=\<token\>`
 
 
 ----
