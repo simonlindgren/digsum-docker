@@ -1,7 +1,5 @@
 ## Digsum Datascience Docker Container
 
-Created by Simon Lindgren.
-
 ### Installation
 
 1. Check that Docker is installed: `$ docker -v`
