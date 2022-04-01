@@ -20,3 +20,11 @@ RUN python -m spacy download en_core_web_sm
 
 # Install Jupyter theme
 RUN pip install jupyterlab_darkside_ui
+
+# Also install Atom
+curl -L https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb > /tmp/atom.deb && \
+dpkg -i /tmp/atom.deb && \
+rm -f /tmp/atom.deb
+
+# Launch Atom
+CMD ["/usr/bin/atom","-f","--no-sandbox"]
