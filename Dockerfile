@@ -1,4 +1,4 @@
-# VERSION: 0.1.2
+# VERSION: 0.1.3
 # DESCRIPTION: DIGSUM Datascience Docker Container
 # FULL DESCRIPTION: https://github.com/simonlindgren/digsum-docker
 # BUILD: sudo docker build --rm -t digsum-docker .
@@ -10,7 +10,7 @@ FROM jupyter/datascience-notebook
 RUN pip install -U pip setuptools wheel
 
 # Install python packages 
-RUN pip install -U nltk spacy networkx
+RUN pip install -U nltk spacy networkx twarc
 
 # Install NLTK content
 RUN python -m nltk.downloader all
