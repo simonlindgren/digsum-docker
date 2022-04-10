@@ -29,3 +29,5 @@
 **v 0.1.1**: Install `nltk` (plus content), `spacy` (plus content), and `networkx`.
 
 **v 0.1.2**: Install the `jupyterlab_darkside_ui` theme. Must be manually activated (_Themes_ menu) after container launch.
+
+**v 0.1.3**: Install the `twarc` theme.
