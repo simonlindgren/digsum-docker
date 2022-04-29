@@ -1,4 +1,4 @@
-# VERSION: 0.1.3
+# VERSION: 0.1.4
 # DESCRIPTION: DIGSUM Datascience Docker Container
 # FULL DESCRIPTION: https://github.com/simonlindgren/digsum-docker
 # BUILD: sudo docker build --rm -t digsum-docker .
