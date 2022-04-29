@@ -10,7 +10,7 @@ FROM jupyter/datascience-notebook
 RUN pip install -U pip setuptools wheel
 
 # Install python packages 
-RUN pip install -U nltk spacy networkx twarc psaw praw
+RUN pip install -U nltk spacy networkx twarc
 
 # Install NLTK content
 RUN python -m nltk.download('stopwords')
