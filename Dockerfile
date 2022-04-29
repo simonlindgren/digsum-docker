@@ -20,7 +20,3 @@ RUN python -m spacy download en_core_web_sm
 
 # Install Jupyter themes
 RUN pip install jupyterlab_darkside_ui jupyterlab_legos_ui jupyterlab-simpledark jupyterlab_materialdarker theme-darcula jupyterlab-horizon-theme
-
-# Set a particular theme 
-RUN mkdir -p ~/.jupyterlab/user-settings/@jupyterlab/apputils-extension/ && \
-    echo '{ "theme":"Simpledark original" }' > themes.jupyterlab-settings
