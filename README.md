@@ -32,4 +32,4 @@
 
 **v 0.1.3**: Install the `twarc` theme.
 
-**v 0.1.4**: Install several more themes and set one of them as default on launch.
+**v 0.1.4**: Install several more themes.
