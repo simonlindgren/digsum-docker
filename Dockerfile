@@ -13,7 +13,7 @@ RUN pip install -U pip setuptools wheel
 RUN pip install -U nltk spacy networkx twarc
 
 # Install NLTK content
-RUN python -m nltk.download('stopwords')
+RUN python -m nltk.downloader stopwords
 
 # Install spacy content
 RUN python -m spacy download en_core_web_sm
