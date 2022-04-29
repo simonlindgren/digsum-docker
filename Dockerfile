@@ -10,19 +10,16 @@ FROM jupyter/datascience-notebook
 RUN pip install -U pip setuptools wheel
 
 # Install python packages 
-RUN pip install -U nltk spacy networkx twarc
+RUN pip install -U nltk spacy networkx twarc psaw praw
 
 # Install NLTK content
-RUN python -m nltk.downloader all
+RUN python -m nltk.download('stopwords')
 
 # Install spacy content
 RUN python -m spacy download en_core_web_sm
 
 # Install Jupyter themes
 RUN pip install jupyterlab_darkside_ui jupyterlab_legos_ui jupyterlab-simpledark jupyterlab_materialdarker theme-darcula jupyterlab-horizon-theme
-RUN jupyter labextension install jupyterlab_onedarkpro
-RUN jupyter labextension install @yeebc/jupyterlab_neon_theme
-RUN jupyter labextension install @shahinrostami/theme-purple-please
 
 # Set a particular theme 
 RUN mkdir -p ~/.jupyterlab/user-settings/@jupyterlab/apputils-extension/ && \
