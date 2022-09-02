@@ -19,4 +19,4 @@ RUN python -m nltk.downloader stopwords
 RUN python -m spacy download en_core_web_sm
 
 # Install Jupyter themes
-RUN pip install jupyterlab_darkside_ui jupyterlab_legos_ui jupyterlab-simpledark jupyterlab_materialdarker theme-darcula jupyterlab-horizon-theme
+RUN pip install jupyterlab_darkside_ui jupyterlab_legos_ui jupyterlab-simpledark jupyterlab_materialdarker theme-darcula jupyterlab-horizon-theme bertopic
