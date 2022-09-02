@@ -30,9 +30,9 @@
 
 **v 0.1.2**: Install the `jupyterlab_darkside_ui` theme. Must be manually activated (_Themes_ menu) after container launch.
 
-**v 0.1.3**: Install the `twarc` theme.
+**v 0.1.3**: Install `twarc`.
 
 **v 0.1.4**: Install several more themes.
 
-**v 0.1.5**: Install `bertopic`
+**v 0.1.5**: Install `bertopic`.
 
