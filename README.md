@@ -34,5 +34,5 @@
 
 **v 0.1.4**: Install several more themes.
 
-**v 0.1.5**: Install `bertopic`.
+**v 0.1.5**: Install `bertopic` and `tensorflow`.
 
